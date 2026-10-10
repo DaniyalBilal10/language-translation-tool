@@ -26,16 +26,12 @@ This project was created for **Task 1 of the CodeAlpha Artificial Intelligence I
 - MyMemory Translation API
 
 ## Screenshots
-Add screenshots after running the project:
-1. Create a folder named `screenshots` in the project.
-2. Take screenshots (Windows: press `Win + Shift + S`) of the desktop and mobile views.
-3. Save them as `screenshots/desktop.png` and `screenshots/mobile.png`.
-4. Uncomment these lines:
 
-```markdown
-<!-- ![Desktop view](screenshots/desktop.png) -->
-<!-- ![Mobile view](screenshots/mobile.png) -->
-```
+### Desktop view
+![Desktop view](screenshots/desktop.png)
+
+### Mobile view
+![Mobile view](screenshots/mobile.png)
 
 ## Project Structure
 ```
