@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LinguaBridge - a simple language translation tool built with HTML, CSS and JavaScript." />
+  <title>LinguaBridge | Language Translation Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <!-- Inline SVG globe icon (no external assets needed) -->
+      <svg class="brand-icon" viewBox="0 0 24 24" width="34" height="34" fill="none"
+           stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3 12h18"></path>
+        <path d="M12 3c2.8 3 2.8 15 0 18"></path>
+        <path d="M12 3c-2.8 3-2.8 15 0 18"></path>
+      </svg>
+      <h1>LinguaBridge</h1>
+    </div>
+    <p class="tagline">Translate text between more than 15 languages instantly.</p>
+  </header>
+
+  <main class="app">
+    <section class="card" aria-label="Translator">
+
+      <!-- Language selectors with swap button in the middle -->
+      <div class="language-bar">
+        <div class="field">
+          <label for="sourceLang">From</label>
+          <select id="sourceLang"></select>
+        </div>
+
+        <button id="swapBtn" class="icon-btn" type="button"
+                aria-label="Swap languages" title="Swap languages">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 4L3 8l4 4"></path>
+            <path d="M3 8h14"></path>
+            <path d="M17 20l4-4-4-4"></path>
+            <path d="M21 16H7"></path>
+          </svg>
+        </button>
+
+        <div class="field">
+          <label for="targetLang">To</label>
+          <select id="targetLang"></select>
+        </div>
+      </div>
+
+      <!-- Two side-by-side panels -->
+      <div class="panels">
+
+        <!-- Source panel -->
+        <div class="panel">
+          <label for="inputText" class="panel-title">Text to translate</label>
+          <textarea id="inputText" rows="9" placeholder="Type or paste your text here..."></textarea>
+          <div class="panel-footer">
+            <span id="charCounter" class="counter" aria-live="polite">0 characters · 0 / 500 bytes</span>
+            <button id="clearBtn" class="btn btn-ghost" type="button">Clear text</button>
+          </div>
+        </div>
+
+        <!-- Output panel -->
+        <div class="panel">
+          <h2 id="outputTitle" class="panel-title">Translation</h2>
+          <div id="outputText" class="output is-placeholder" role="region"
+               aria-labelledby="outputTitle" aria-live="polite" tabindex="0"></div>
+          <div class="panel-footer">
+            <span id="detectedInfo" class="counter"></span>
+            <button id="copyBtn" class="btn btn-ghost" type="button" disabled>Copy translation</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main action -->
+      <div class="actions">
+        <button id="translateBtn" class="btn btn-primary" type="button">
+          <span id="spinner" class="spinner" hidden></span>
+          <span id="translateLabel">Translate</span>
+        </button>
+      </div>
+
+      <!-- Messages (errors, info, success) -->
+      <p id="statusMessage" class="status" hidden></p>
+    </section>
+
+    <p class="note">
+      Tip: press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> inside the text box to translate.
+      Text is sent to the free MyMemory service, so avoid pasting private information.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    Created for the <strong>CodeAlpha</strong> Artificial Intelligence Internship · Powered by MyMemory Translation API
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

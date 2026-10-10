@@ -1,0 +1,18 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Environment files (not used now, but protects you if you add a backend later)
+.env
+.env.*
+!.env.example
+
+# Dependencies and logs
+node_modules/
+*.log
+npm-debug.log*
